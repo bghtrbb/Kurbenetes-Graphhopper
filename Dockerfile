@@ -9,4 +9,5 @@ ADD assets /tmp
 
 #ENTRYPOINT ["gcloud auth login", "-t -i", "bghtrbb/kurbenetes-graphhopper"]
 #CMD docker run -t -i --name gcloud-kurb-setup kurbenetes-graphhopper
+RUN sudo docker run -a stdin -a stdout -i -t google/cloud-sdk
 RUN gcloud auth login
